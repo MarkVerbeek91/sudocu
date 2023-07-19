@@ -5,5 +5,5 @@ cc_binary(
     srcs = ["main.cc"],
     deps = [
         "//inc/ext:rapidcsv",
-    ]
+    ],
 )
