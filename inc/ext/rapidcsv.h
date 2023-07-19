@@ -1351,7 +1351,7 @@ namespace rapidcsv
 
       SetCell<T>(static_cast<size_t>(columnIdx), pRowIdx, pCell);
     }
-    
+
     /**
      * @brief   Get column name
      * @param   pColumnIdx            zero-based column index.

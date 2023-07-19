@@ -1,14 +1,15 @@
+// Copyright 2023 Mark Verbeek
+
 #include <iostream>
 #include <vector>
+
 #include "inc/ext/rapidcsv.h"
 
-int main()
-{
-    std::cout << "hello world!" << std::endl;
+int main() {
+  std::cout << "hello world!" << std::endl;
 
-    rapidcsv::Document doc("4x4.csv",
-                           rapidcsv::LabelParams(-1, -1),
-                           rapidcsv::SeparatorParams(' '));
+  rapidcsv::Document doc("4x4.csv", rapidcsv::LabelParams(-1, -1),
+                         rapidcsv::SeparatorParams(' '));
 
-    return 0;
+  return 0;
 }
