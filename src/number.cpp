@@ -30,3 +30,18 @@ void Number::set_number(int num) {
 }
 
 std::vector<int> Number::get_options() { return options; }
+
+void Number::remove_option(int n) {
+  std::vector<int>::iterator it;
+
+  it = options.begin();
+
+  for (int i = 0; i < static_cast<int>(options.size()); i++) {
+    if (*it == i) {
+      options.erase(it);
+      break;
+    }
+  }
+
+  return;
+}

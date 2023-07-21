@@ -7,6 +7,7 @@
 
 class Solver {
  public:
+  NumberSequence init(NumberSequence);
   NumberSequence solve(NumberSequence);
 };
 

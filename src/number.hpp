@@ -11,9 +11,12 @@ class Number {
  public:
   explicit Number(int);
   explicit Number(int, int);
+
   int get_number();
   void set_number(int);
+
   std::vector<int> get_options();
+  void remove_option(int);
 };
 
 #endif  // SRC_NUMBER_HPP_
