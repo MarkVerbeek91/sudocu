@@ -11,6 +11,21 @@ TEST(NumberTest, GameFactory_Int2Number_NumberClassForSetNumber) {
   EXPECT_EQ(num.get_number(), 1);
 }
 
+TEST(NumberTest, GameFactory_Int2Number_OptionsOpen) {
+  Number num(0, 16);
+
+  EXPECT_EQ(num.get_options().size(), 16);
+}
+
+TEST(NumberTest, GameFactory_Int2Number_NumberClassForGetNumber) {
+  Number num(0);
+
+  num.set_number(1);
+
+  EXPECT_EQ(num.get_number(), 1);
+  EXPECT_EQ(num.get_options().size(), 0);
+}
+
 TEST(NumberTest, GameFactory_Int2Number_NumberClassForOpenNumber) {
   Number num(0);
   std::vector<int> expected_options;

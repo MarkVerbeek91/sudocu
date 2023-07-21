@@ -9,8 +9,10 @@ class Number {
   std::vector<int> options;
 
  public:
-  explicit Number(int num);
+  explicit Number(int);
+  explicit Number(int, int);
   int get_number();
+  void set_number(int);
   std::vector<int> get_options();
 };
 

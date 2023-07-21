@@ -6,6 +6,8 @@
 
 void NumberSequence::set_numbers(std::vector<Number> nums) { numbers = nums; }
 
+std::vector<Number> NumberSequence::get_numbers() { return numbers; }
+
 int NumberSequence::length() { return numbers.size(); }
 
 bool NumberSequence::is_solved() {

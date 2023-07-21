@@ -27,3 +27,12 @@ TEST(NumberSequence, NumberSequence_NumberAreSet_IsNotSolved) {
   nseq.set_numbers(numbers);
   EXPECT_FALSE(nseq.is_solved());
 }
+
+TEST(NumberSequence, NumberSequence_GetNumbers_NumberVector) {
+  NumberSequence nseq;
+  Number num(-42);
+  std::vector<Number> numbers;
+  numbers.push_back(num);
+  nseq.set_numbers(numbers);
+  EXPECT_EQ(nseq.get_numbers()[0].get_number(), -42);
+}

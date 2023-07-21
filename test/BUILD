@@ -19,10 +19,10 @@ cc_test(
 cc_test(
     name = "game_objects_test",
     size = "small",
-    srcs = [
-        "number_sequence_test.cpp",
-        "number_test.cpp",
-    ],
+    srcs = glob(
+        ["*.cpp"],
+        exclude = ["parser_test.cpp"],
+    ),
     deps = [
         "//src:game_objects",
         "@com_google_googletest//:gtest_main",

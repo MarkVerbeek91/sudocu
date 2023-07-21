@@ -12,6 +12,7 @@ class NumberSequence {
 
  public:
   void set_numbers(std::vector<Number>);
+  std::vector<Number> get_numbers();
   int length();
   bool is_solved();
 

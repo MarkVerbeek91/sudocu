@@ -13,10 +13,12 @@ cc_library(
     srcs = [
         "number.cpp",
         "number_sequence.cpp",
+        "solver.cpp",
     ],
     hdrs = [
         "number.hpp",
         "number_sequence.hpp",
+        "solver.hpp",
     ],
     visibility = [
         "//test:__pkg__",
