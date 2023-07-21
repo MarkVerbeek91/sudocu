@@ -6,12 +6,21 @@ cc_library(
 )
 
 cc_test(
-    name = "hello_test",
+    name = "parser_test",
     size = "small",
-    srcs = ["hello_test.cc"],
+    srcs = ["parser_test.cpp"],
     deps = [
         ":test_data",
-        "//inc/ext:rapidcsv",
+        "//src:tools",
+        "@com_google_googletest//:gtest_main",
+    ],
+)
+
+cc_test(
+    name = "number_test",
+    size = "small",
+    srcs = ["number_test.cpp"],
+    deps = [
         "//src:game_objects",
         "@com_google_googletest//:gtest_main",
     ],
