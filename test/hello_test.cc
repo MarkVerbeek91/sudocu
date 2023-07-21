@@ -1,9 +1,11 @@
+// Copyright 2023 Mark Verbeek
 #include <gtest/gtest.h>
 
 #include <iostream>
-// Copyright 2023 Mark Verbeek
+#include <vector>
 
 #include "inc/ext/rapidcsv.h"
+#include "src/number.hpp"
 #include "test/test_data.h"
 
 #define EMPTY 0
@@ -46,28 +48,6 @@ TEST(FileParserTest, Parser_ReadDoc_FirstDigitIsCorrect) {
   EXPECT_EQ(game_data[1], 0);
   EXPECT_EQ(game_data[2], -1);
 }
-
-class Number {
-  int number;
-  std::vector<int> options;
-
- public:
-  explicit Number(int num);
-  int get_number();
-  std::vector<int> get_options();
-};
-
-Number::Number(int num) {
-  number = num;
-
-  if (num == 0) {
-    for (int i = 1; i <= 9; i++) options.push_back(i);
-  }
-}
-
-int Number::get_number() { return number; }
-
-std::vector<int> Number::get_options() { return options; }
 
 TEST(FileParserTest, GameFactory_Int2Number_NumberClassForSetNumber) {
   Number num(1);

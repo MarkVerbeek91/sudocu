@@ -12,6 +12,7 @@ cc_test(
     deps = [
         ":test_data",
         "//inc/ext:rapidcsv",
+        "//src:game_objects",
         "@com_google_googletest//:gtest_main",
     ],
 )
