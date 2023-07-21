@@ -5,13 +5,13 @@
 
 #include <vector>
 
-TEST(FileParserTest, GameFactory_Int2Number_NumberClassForSetNumber) {
+TEST(NumberTest, GameFactory_Int2Number_NumberClassForSetNumber) {
   Number num(1);
 
   EXPECT_EQ(num.get_number(), 1);
 }
 
-TEST(FileParserTest, GameFactory_Int2Number_NumberClassForOpenNumber) {
+TEST(NumberTest, GameFactory_Int2Number_NumberClassForOpenNumber) {
   Number num(0);
   std::vector<int> expected_options;
   for (int i = 1; i <= 9; i++) expected_options.push_back(i);

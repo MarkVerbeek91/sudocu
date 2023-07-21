@@ -10,8 +10,14 @@ cc_binary(
 
 cc_library(
     name = "game_objects",
-    srcs = ["number.cpp"],
-    hdrs = ["number.hpp"],
+    srcs = [
+        "number.cpp",
+        "number_sequence.cpp",
+    ],
+    hdrs = [
+        "number.hpp",
+        "number_sequence.hpp",
+    ],
     visibility = [
         "//test:__pkg__",
     ],
